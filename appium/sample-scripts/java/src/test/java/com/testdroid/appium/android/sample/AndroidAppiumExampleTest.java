@@ -65,7 +65,7 @@ public class AndroidAppiumExampleTest  extends BaseAndroidTest {
         if(crashMeButton.getText().equalsIgnoreCase("Crash Me")){
         	 AssertJUnit.assertEquals(1, 1);
         }else{
-        	 AssertJUnit.assertEquals(1, 0);
+        	 AssertJUnit.assertEquals("Crash Me", crashMeButton.getText());
         }
         
         
