@@ -38,18 +38,18 @@ public abstract class BaseTest {
 
         if (isClientSideTestRun()) {
             logger.debug("Setting client side specific capabilities...");
-            String fileUUID = getDefaultFileUUID();
+          /*  String fileUUID = getDefaultFileUUID();
             if (isUploadApplication()) {
                 logger.debug("Uploading " + getTargetAppPath() + " to Testdroid Cloud");
                 fileUUID = FileUploader.uploadFile(getTargetAppPath(), getAppiumServerAddress(),
                         getApiKey());
                 logger.debug("File uploaded. File UUID is " + fileUUID);
-            }
+            }*/
             if (exportTestResultsToCloud()) {
                 logger.debug("Exporting results enabled");
                 capabilities.setCapability("testdroid_junitWaitTime", 300);
             }
-            capabilities.setCapability("testdroid_app", fileUUID);
+            capabilities.setCapability("testdroid_app", getTargetAppPath());
             capabilities.setCapability("testdroid_apiKey", getApiKey());
             logger.debug("Setting client side specific capabilities... FINISHED");
         } else if (isServerSideTestRun()) {

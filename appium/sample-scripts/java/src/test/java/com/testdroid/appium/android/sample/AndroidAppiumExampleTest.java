@@ -61,8 +61,16 @@ public class AndroidAppiumExampleTest  extends BaseAndroidTest {
 				e.printStackTrace();
             }
         
+        WebElement crashMeButton = wd.findElement(By.id("crashmebutton"));
+        if(crashMeButton.getText().equalsIgnoreCase("Crash Me")){
+        	 AssertJUnit.assertEquals(1, 1);
+        }else{
+        	 AssertJUnit.assertEquals(1, 0);
+        }
+        
+        
         //*********Enter the login details and login*********//
-        WebElement userField = wd.findElement(By.id("appcenter_Login_login"));
+      /*  WebElement userField = wd.findElement(By.id("appcenter_Login_login"));
         userField.click();
         userField.sendKeys(serverutil.getUsername());
 
@@ -83,7 +91,7 @@ public class AndroidAppiumExampleTest  extends BaseAndroidTest {
         contextField.sendKeys(serverutil.getMobContext());
 
         //takeScreenshot("Login details entered");
-        ((AndroidDriver)wd).pressKeyCode(AndroidKeyCode.ENTER);
+        ((AndroidDriver)wd).pressKeyCode(AndroidKeyCode.ENTER);*/
 
         try {
             
