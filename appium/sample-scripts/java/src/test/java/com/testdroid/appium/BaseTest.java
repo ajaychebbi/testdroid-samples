@@ -51,6 +51,12 @@ public abstract class BaseTest {
             }
             capabilities.setCapability("testdroid_app", getTargetAppPath());
             capabilities.setCapability("testdroid_apiKey", getApiKey());
+            if(getTestdroidProject()!=null) {
+            	capabilities.setCapability("testdroid_project", getTestdroidProject());
+            }
+            if(getTestdroidDevice()!=null) {
+            	capabilities.setCapability("testdroid_device", getTestdroidDevice());
+            }
             logger.debug("Setting client side specific capabilities... FINISHED");
         } else if (isServerSideTestRun()) {
             logger.debug("Setting server side specific capabilities...");
@@ -138,6 +144,16 @@ public abstract class BaseTest {
 
     private String getTargetAppPath() {
         String propertyName = "applicationPath";
+        return System.getProperty(propertyName);
+    }
+    
+    private String getTestdroidProject() {
+        String propertyName = "testdroid_project";
+        return System.getProperty(propertyName);
+    }
+    
+    private String getTestdroidDevice() {
+        String propertyName = "testdroid_device";
         return System.getProperty(propertyName);
     }
 
