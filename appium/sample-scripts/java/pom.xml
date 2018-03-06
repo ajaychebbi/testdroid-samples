@@ -78,6 +78,7 @@
 						<apiKey>${apiKey}</apiKey>
 						<applicationPath>${applicationPath}</applicationPath>
 						<exportResults>${exportResults}</exportResults>
+						<testdroid_project>${testdroid_project}</testdroid_project>
 					</systemPropertyVariables>
 				</configuration>
 			</plugin>
