@@ -40,7 +40,7 @@ public class AndroidAppiumExampleTest  extends BaseAndroidTest {
     @BeforeClass
     public void setUp() throws Exception {
         setUpTest();
-        serverutil = ServerUtil.getInstance();
+     //   serverutil = ServerUtil.getInstance();
         wait = new WebDriverWait(wd, 30);
     }
     @AfterClass
