@@ -62,11 +62,11 @@ public class AndroidAppiumExampleTest  extends BaseAndroidTest {
             }
         
         WebElement crashMeButton = wd.findElement(By.id("crashmebutton"));
-        if(crashMeButton.getText().equalsIgnoreCase("Crash Me")){
-        	 AssertJUnit.assertEquals(1, 1);
-        }else{
+        //if(crashMeButton.getText().equalsIgnoreCase("Crash Me")){
         	 AssertJUnit.assertEquals("Crash Me", crashMeButton.getText());
-        }
+        //}else{
+        	// AssertJUnit.assertEquals("Crash Me", crashMeButton.getText());
+        //}
         
         
         //*********Enter the login details and login*********//
