@@ -55,35 +55,25 @@ public class AndroidAppiumExampleTest  extends BaseAndroidTest {
         wd.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
         
         try {
-				Thread.sleep(10000);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+		Thread.sleep(10000);
+	} catch (InterruptedException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
             }
         
         WebElement crashMeButton = wd.findElement(By.id("crashmebutton"));
         
-        AssertJUnit.assertEquals("Crash Me", crashMeButton.getText());
+        AssertJUnit.assertEquals("Yay!!!", crashMeButton.getText());
         
         
         try {
             
-            Thread.sleep(10000);
+            Thread.sleep(20000);
         } catch (InterruptedException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
 
-	/* Check this later
-        WebElement catalogElement = wait.until(
-                ExpectedConditions.presenceOfElementLocated(By.xpath("//android.view.View[@content-desc='Catalog']")));
-
-        //takeScreenshot("Catalog Screen");
-        if (catalogElement.isDisplayed()) {
-            AssertJUnit.assertEquals(1, 1);
-        } else {
-            AssertJUnit.assertEquals(1, 0);//fail the case
-        }
-	*/
+	
     }
 }
