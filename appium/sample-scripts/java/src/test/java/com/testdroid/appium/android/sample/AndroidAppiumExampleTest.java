@@ -62,37 +62,10 @@ public class AndroidAppiumExampleTest  extends BaseAndroidTest {
             }
         
         WebElement crashMeButton = wd.findElement(By.id("crashmebutton"));
-        //if(crashMeButton.getText().equalsIgnoreCase("Crash Him")){
-        	 AssertJUnit.assertEquals("Crash Him", crashMeButton.getText());
-        //}else{
-        	// AssertJUnit.assertEquals("Crash Me", crashMeButton.getText());
-        //}
+        
+        AssertJUnit.assertEquals("Crash him", crashMeButton.getText());
         
         
-        //*********Enter the login details and login*********//
-      /*  WebElement userField = wd.findElement(By.id("appcenter_Login_login"));
-        userField.click();
-        userField.sendKeys(serverutil.getUsername());
-
-        WebElement passwordField = wd.findElement(By.id("appcenter_Login_pw"));
-        passwordField.click();
-        passwordField.sendKeys(serverutil.getPassword());
-
-        WebElement hostField = wd.findElement(By.id("appcenter_Login_server"));
-        hostField.click();
-        hostField.sendKeys(serverutil.getHost());
-
-        WebElement portField = wd.findElement(By.id("appcenter_Login_port"));
-        portField.click();
-        portField.sendKeys(""+ serverutil.getPort() + "");
-
-        WebElement contextField = wd.findElement(By.id("appcenter_Login_ctx"));
-        contextField.click();
-        contextField.sendKeys(serverutil.getMobContext());
-
-        //takeScreenshot("Login details entered");
-        ((AndroidDriver)wd).pressKeyCode(AndroidKeyCode.ENTER);*/
-
         try {
             
             Thread.sleep(10000);
