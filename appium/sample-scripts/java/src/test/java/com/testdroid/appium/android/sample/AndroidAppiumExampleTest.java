@@ -63,7 +63,7 @@ public class AndroidAppiumExampleTest  extends BaseAndroidTest {
         
         WebElement crashMeButton = wd.findElement(By.id("crashmebutton"));
         
-        AssertJUnit.assertEquals("Crash him", crashMeButton.getText());
+        AssertJUnit.assertEquals("Crash Me", crashMeButton.getText());
         
         
         try {
